@@ -1,0 +1,11 @@
+[Unit]
+Description=BD PROCHOT OFF Service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/bd_prochot_scipt/bd_prochot_off.sh
+ExecStop=/opt/bd_prochot_scipt/bd_prochot_on.sh
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
